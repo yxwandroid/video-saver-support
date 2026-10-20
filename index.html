@@ -3,34 +3,64 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>视频保存助手 · 支持</title>
+  <meta name="description" content="视频剪辑助手支持：从照片或文件选择视频，在设备上完成裁剪、分段、静音并导出 MP4。">
+  <title>视频剪辑助手 · 支持</title>
   <style>
     :root { color-scheme: light dark; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
     body { margin: 0; background: #09051f; color: #f7f4ff; }
     main { max-width: 720px; margin: 0 auto; padding: 72px 24px; }
     .mark { width: 68px; height: 68px; display: grid; place-items: center; border-radius: 20px; background: linear-gradient(135deg,#ff5364,#ff9a35); font-size: 34px; }
     h1 { font-size: 36px; margin: 28px 0 10px; }
-    p { color: #c6bfd9; line-height: 1.75; }
+    p, li { color: #c6bfd9; line-height: 1.75; }
+    li + li { margin-top: 10px; }
+    ol, ul { padding-left: 22px; }
     section { margin-top: 28px; padding: 24px; border: 1px solid #332a59; border-radius: 20px; background: #15102f; }
     h2 { margin-top: 0; font-size: 20px; }
+    h3 { margin: 24px 0 8px; font-size: 17px; }
     a { color: #ff7860; }
+    .eyebrow { color: #ff9a75; font-size: 14px; }
+    footer { margin-top: 32px; font-size: 13px; }
+    @media (max-width: 480px) { main { padding: 40px 20px; } h1 { font-size: 31px; } section { padding: 20px; } }
   </style>
 </head>
 <body>
   <main>
-    <div class="mark" aria-hidden="true">↓</div>
-    <h1>视频保存助手</h1>
-    <p>把你拥有权利或已获授权的视频保存到系统“照片”。</p>
-    <section>
-      <h2>使用帮助</h2>
-      <p>复制视频分享链接，回到应用粘贴后点击“加入并下载”。首次保存时，请允许应用添加内容到“照片”。</p>
-      <p>请仅处理你拥有权利或已获明确授权的内容，并遵守内容来源平台的服务条款。</p>
+    <div class="mark" aria-hidden="true">✂</div>
+    <h1>视频剪辑助手</h1>
+    <p>裁剪分段静音与本地导出。从一个视频开始，留下恰到好处的精彩。</p>
+    <p class="eyebrow">完全免费 · 无广告 · 无内购 · 无需注册</p>
+    <section aria-labelledby="edit-help">
+      <h2 id="edit-help">开始剪辑</h2>
+      <ol>
+        <li>在“剪辑”页面点击“从相册导入”或“选择文件”，选择你拥有权利或已获授权的视频。也可点击“体验示例视频”，使用应用内原创生成的示例素材。</li>
+        <li>预览素材，调整开始和结束时间，保留需要的区间。</li>
+        <li>如需分段，开启“分割成两个视频”，在保留区间内设置分割点。</li>
+        <li>如需移除原声，开启“静音”。没有音轨的视频不需要此操作。</li>
+        <li>点击“导出所选片段”或“导出两个片段”。完成后选择“保存到照片”或“分享或存储到文件”。</li>
+      </ol>
+      <p>剪辑与编码在设备本地完成。视频通过系统选择器导入，只访问你选中的素材；选择云端文件时，系统文件服务可能需要先下载素材。内置示例无需网络。</p>
     </section>
-    <section>
-      <h2>联系我们</h2>
+    <section aria-labelledby="export-help">
+      <h2 id="export-help">导出与常见问题</h2>
+      <h3>保存到“照片”失败怎么办？</h3>
+      <p>首次保存时需要允许应用添加内容到“照片”。若已拒绝，可在系统设置中调整权限，或直接使用“分享或存储到文件”。已有导出结果会保留在当前项目中，可重试保存。</p>
+      <h3>关闭或更换素材后，视频还在吗？</h3>
+      <p>关闭当前项目或更换素材会清理该项目的临时素材与尚未另存的导出文件。请先保存需要的结果。已保存到“照片”、“文件”或其他应用的副本不会被删除。</p>
+      <h3>为什么不能导入或导出某个视频？</h3>
+      <p>请确认文件已下载到设备、系统可播放且可用空间充足。受保护、损坏或设备无法解码的视频可能无法处理。分割点需位于有效的保留区间内。</p>
+    </section>
+    <section aria-labelledby="download-help">
+      <h2 id="download-help">独立的链接下载功能</h2>
+      <p>“链接下载”页面保留抖音视频链接解析、下载队列、进度查看、停止、继续和失败重试。粘贴有效的视频分享链接后加入队列，完成后保存到“照片”。下载期间请保持应用在前台。</p>
+      <p>此功能会直接访问抖音网站和内容分发网络；可用性取决于来源平台的服务与访问规则。请仅在具备素材权利及来源平台许可的前提下使用，并遵守平台服务条款。应用与抖音平台无关联，也不因提供剪辑功能而取得第三方授权。</p>
+    </section>
+    <section aria-labelledby="contact">
+      <h2 id="contact">联系我们</h2>
       <p>如遇到问题，请发送邮件至 <a href="mailto:yxw_flutter@163.com">yxw_flutter@163.com</a>。</p>
+      <p>建议附上设备型号、iOS 版本、操作步骤和错误提示。无需发送不希望分享的私人视频或完整个人信息。</p>
       <p><a href="privacy.html">查看隐私政策</a></p>
     </section>
+    <footer><p>更新日期：2026 年 10 月 20 日</p></footer>
   </main>
 </body>
 </html>
